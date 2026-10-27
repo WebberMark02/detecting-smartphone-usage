@@ -32,5 +32,5 @@ fi
 output_dir="${dirname}_trimmed_to_${seconds}_secs"
 mkdir ${output_dir}
 for filename in "${dirname}"/*.mp4; do
-	ffmpeg -ss 00:00:00 -i $filename -c copy -t 00:00:0${seconds} "${output_dir}/${filename##*/}"
+	ffmpeg -ss 00:00:00 -i $filename -c copy -t 00:00:${seconds} "${output_dir}/${filename##*/}"
 done
